@@ -72,21 +72,22 @@ public class MainActivity extends AppCompatActivity implements MasterListFragmen
 
             //init bodyPartFramgnet
             BodyPartFragment bodyPartFragment = new BodyPartFragment();
-
+            //check wich body part is selected
             switch (bodyPart) {
                 case 0:
-
+                    //set head images with index and begin transaciton
                     bodyPartFragment.setImageIds(AndroidImageAssets.getHeads());
                     bodyPartFragment.setListIndex(listIndex);
                     getFragmentManager().beginTransaction().replace(R.id.headCointaner, bodyPartFragment).commit();
                     break;
                 case 1:
-
+                    //set body images with index and begin transaciton
                     bodyPartFragment.setImageIds(AndroidImageAssets.getBodies());
                     bodyPartFragment.setListIndex(listIndex);
                     getFragmentManager().beginTransaction().replace(R.id.bodyContainer, bodyPartFragment).commit();
                     break;
                 case 2:
+                    //set leg images with index and begin transaciton
                     bodyPartFragment.setImageIds(AndroidImageAssets.getLegs());
                     bodyPartFragment.setListIndex(listIndex);
                     getFragmentManager().beginTransaction().replace(R.id.feetContainer, bodyPartFragment).commit();

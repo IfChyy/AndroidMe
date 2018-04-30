@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.RelativeLayout;
 
 import com.example.ifchyyy.androidme.R;
 import com.example.ifchyyy.androidme.adapters.GridAdapter;
@@ -65,10 +64,10 @@ public class MasterListFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
-        try{
+        //init our callback when fragment attached
+        try {
             callback = (OnImageClickListener) context;
-        }catch (ClassCastException e ){
+        } catch (ClassCastException e) {
 
         }
     }

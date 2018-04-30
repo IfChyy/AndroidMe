@@ -82,10 +82,13 @@ public class BodyPartFragment extends Fragment implements OnClickListener{
 
     @Override
     public void onClick(View v) {
+        //increment index of image if clicked
         listIndex++;
+        //check if index goes out of bounds
         if(listIndex > imageIds.size()-1){
             listIndex = 0;
         }
+        //set index
         bodyPartImageView.setImageResource(imageIds.get(listIndex));
     }
 }
